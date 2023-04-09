@@ -1,0 +1,76 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.UI {
+  position: absolute;
+  left: 60%;
+  width:37%;
+  height:100%;
+  background-color:gray;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+}
+
+.input-text{
+ margin-bottom: 20px;
+}
+
+
+h1{
+  font-size: 72px;
+  font-weight: 300;
+  color: white;
+  margin-bottom:20px;
+  margin-top:0px;
+}
+
+#controls{
+  display: grid;
+    grid-column-gap: 10%;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.control-slider{
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+input {
+  display:flex;
+  flex-direction: column;
+}
+
+label {
+  display:flex;
+  flex-direction: column;
+  color: white;
+}
+
+button {
+  display:flex;
+  flex-direction: column;
+  padding: 16px 32px;
+  align-items: center;
+}
+
+#button-save {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 16px 0px;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  
+}
+
+

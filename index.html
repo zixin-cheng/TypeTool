@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+  
+  
+  
+  <body>
+  <script src="sketch.js"></script>
+  <div class = "UI">
+    <h1>Project Name</h1>
+    <div>
+      <label for="text">Text</label>
+      <textarea id = "textinput" class="input-text" autofocus="">Hello World</textarea>
+    </div>
+    
+    <div id="controls">
+      <div class = "control-slider">
+        <label for="slider1">SIZE</label>
+        <input id="slider1" type="range" min="1" max="100" value="50" />
+      </div>
+      <div class = "control-slider">
+        <label for="slider2">SPACING</label>
+        <input id="slider2" type="range" min="1" max="100" value="50" />
+      </div>
+      <div class = "control-slider">
+        <label for="slider3">ROTATION</label>
+        <input id="slider3" type="range" min="0" max="360" value="0" />
+      </div>
+      <div class = "control-slider">
+        <label for="slider4">Slider Four</label>
+        <input id="slider4" type="range" min="0" max="360" value="50" />
+      </div>
+
+      <div class = "control-button">
+        <button id="button1">PRESET 1</button>
+      </div>
+      <div class = "control-button">
+        <button id="button2" type="button">PRESET 2</button>
+      </div>
+      <div class = "control-button">
+        <button id="button3" type="button">PRESET 3</button>
+      </div>
+      <div class = "control-button">
+        <button id="button4" type="button">PRESET 4</button>
+      </div>
+    </div>
+
+    <button id="button-save">SAVE IMAGE</button>
+
+</div>
+
+  </body>
+  
+</html>
