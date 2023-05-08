@@ -4,54 +4,107 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="sketch.js"></script>
     <meta charset="utf-8" />
   </head>
   
   
   
-  <body>
-  <script src="sketch.js"></script>
-  <div class = "UI">
-    <h1>Project Name</h1>
-    <div>
-      <label for="text">Text</label>
-      <textarea id = "textinput" class="input-text" autofocus="">Hello World</textarea>
+  <body>  
+    <button id = "button-hide" onclick="myFunction()">-</button>
+    <button id= "button-save">↓</button>
+
+    <div id ="screen">
+
+  <div id ="canvasForHTML">
+  </div>
+
+  <div id = "UI">
+
+    <h1>Barbed</h1>
+    <div class ="input-text">
+      <label for="text">TEXT</label>
+      <textarea id = "textinput" autofocus="">HELLO WORLD</textarea>
     </div>
     
     <div id="controls">
-      <div class = "control-slider">
+      <div class = "control-range">
         <label for="slider1">SIZE</label>
-        <input id="slider1" type="range" min="1" max="100" value="50" />
+        <input id="slider1" type="range" min="50" max="300" value="100" />
       </div>
-      <div class = "control-slider">
+      <div class = "control-range">
         <label for="slider2">SPACING</label>
-        <input id="slider2" type="range" min="1" max="100" value="50" />
+        <input id="slider2" type="range" min="50" max="200" value="70" />
       </div>
-      <div class = "control-slider">
-        <label for="slider3">ROTATION</label>
-        <input id="slider3" type="range" min="0" max="360" value="0" />
+      <div class = "control-range">
+        <label for="slider3">THICKNESS</label>
+        <input id="slider3" type="range" min="0.5" max="5" value="1" step="0.5"/>
       </div>
-      <div class = "control-slider">
-        <label for="slider4">Slider Four</label>
-        <input id="slider4" type="range" min="0" max="360" value="50" />
+      <div class = "control-range">
+        <label for="slider4">SPEED</label>
+        <input id="slider4" type="range" min="1" max="40" value="10" />
+      </div>
+      <div class = "control-range">
+        <label for="slider5">COMPLEXITY</label>
+        <input id="slider5" type="range" min="1" max="10" value="5" />
+      </div>
+      <div class = "control-range">
+        <label for="slider6">LAYERS</label>
+        <input id="slider6" type="range" min="1" max="10" value="2" />
+      </div>
+      <div class = "control-range">
+        <label for="slider7">NOISE</label>
+        <input id="slider7" type="range" min="0.1" max="1.5" value="1" step="0.1"/>
+      </div>
+      <div class = "control-range">
+        <label for="slider8">WAVE</label>
+        <input id="slider8" type="range" min="0" max="2" value="1" step="0.2"/>
       </div>
 
-      <div class = "control-button">
-        <button id="button1">PRESET 1</button>
+      <div class = "color-div">
+        <label for="buttonC">COLOR</label>
+        <input type="checkbox" id="checkfill" name="fill-box">
+        <label for="fill-box">FILL</label>
+        <div class = "color-button">
+          <button id="buttonC1">RANDOM</button>
+          <button id="buttonC2">MONO</button>
+          <button id="buttonC3">OPPOSITE</button>
+        </div>
+        <input class="range color" type="range" min="0" max="300" value="0"/>
       </div>
-      <div class = "control-button">
-        <button id="button2" type="button">PRESET 2</button>
+
+      <div class = "color-div">
+        <label for="buttonS">SHAPE</label>
+        <input type="checkbox" id="checkspike" name="fill-box" checked>
+        <label for="fill-box">SPIKES</label>
+        <div class = "color-button">
+          <button id="buttonS1">DEFAULT</button>
+          <!-- <button id="buttonS2">POINTS</button>
+          <button id="buttonS3">LINES</button> -->
+          <button id="buttonS4">TRI</button>
+          <button id="buttonS5">QUAD</button>
+        </div>
       </div>
-      <div class = "control-button">
-        <button id="button3" type="button">PRESET 3</button>
-      </div>
-      <div class = "control-button">
-        <button id="button4" type="button">PRESET 4</button>
+
+      <div class = "preset-div">
+        <label for="buttonP">PRESETS</label>
+        <div class = "control-button">
+          <button id="button1">WIRES</button>
+          <button id="button2">SHARDS</button>
+          <button id="button3">ROCKS</button>
+          <button id="button4">CONFETTI</button>
+        </div>
       </div>
     </div>
-
+    <div class = "botton-large">
+    <button id="button-random">RANDOMNIZE</button>
+  </div>
+    
+  <!-- <div class = "botton-large">
     <button id="button-save">SAVE IMAGE</button>
+  </div> -->
 
+</div>
 </div>
 
   </body>

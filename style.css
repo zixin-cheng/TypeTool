@@ -1,26 +1,65 @@
 html,
 body {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
   margin: 0;
   padding: 0;
   overflow: hidden;
+  
+}
+#screen{
+  display: grid;
+  grid-template-columns: 80% 20%;
 }
 
-.UI {
+/* #canvasForHTML{
+  display: flex;
+}  */
+#button-hide{
   position: absolute;
-  left: 60%;
-  width:37%;
-  height:100%;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  padding-top: 0px;
+  border-radius: 0px;
+  font-family: '	Courier New', 'Courier New', Courier, monospace;
+  font-size: 36px;
+  text-align: center;
+  align-items: center;
+  background: #323232;
+  color: #FFFFFF;
+  transition: all 0.4s;
+}
+
+#button-save{
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  top: 45px;
+  padding-top: 0px;
+  border-radius: 0px;
+  font-family: '	Courier New', 'Courier New', Courier, monospace;
+  font-size: 36px;
+  text-align: center;
+  align-items: center;
+  background: #323232;
+  color: #FFFFFF;
+  transition: all 0.4s;
+}
+
+#UI {
+  /* position: absolute; */
+  /* left: 80%; */
+  /* width: 18%; */
+  /* height:100%; */
   background-color:gray;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-
+  padding: 20px; 
 }
-
-.input-text{
- margin-bottom: 20px;
-}
-
 
 h1{
   font-size: 72px;
@@ -28,49 +67,237 @@ h1{
   color: white;
   margin-bottom:20px;
   margin-top:0px;
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', Helvetica, Sans-serif;
+}
+
+.input-text{
+  display:flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: nowrap;
+ margin-bottom: 20px;
+}
+
+textarea{
+  resize: vertical;
 }
 
 #controls{
   display: grid;
-    grid-column-gap: 10%;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10%;
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  font-family: 'HelveticaNeue-Thin', 'Helvetica Neue Thin', Helvetica, Sans-serif;
+  padding: 0;
 }
 
-.control-slider{
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-
-input {
+/* .control-range{
   display:flex;
   flex-direction: column;
-}
+  align-items: stretch;
+  flex-wrap: nowrap;
+} */
 
 label {
-  display:flex;
-  flex-direction: column;
   color: white;
+  font-family: 'HelveticaNeue-Thin', 'Helvetica Neue Thin', Helvetica, Sans-serif;
+  letter-spacing: 0.1em;
+  margin-bottom: 2%;
+}
+
+#slider4 {
+  direction: rtl;
 }
 
 button {
-  display:flex;
-  flex-direction: column;
-  padding: 16px 32px;
-  align-items: center;
+  font-family: 'HelveticaNeue-Thin', 'Helvetica Neue Thin', Helvetica, Sans-serif;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  padding: 10px 10%;
+
+  border-radius: 3px;
+  border: 0px;
+  background: #9d9d9d;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+button:hover {
+  color: #FFFFFF;
+  background: #767676;
 }
 
-#button-save {
+.color-div{
+  margin: 0px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.color-button{
+  /* display:flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 16px 0%;
+  margin-top: 0px;
+  flex-wrap: nowrap; */
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-top: 10px;
+  
+}
+
+.range.color{
+  margin-top: 10px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.shape-button{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  margin-top: 10px;
+}
+
+.preset-div{
+  margin: 0px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.control-button{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-top: 10px;
+}
+
+.botton-large {
   display:flex;
   flex-direction: column;
-  align-items: center;
-  
-  padding: 16px 0px;
-  margin-top: 20px;
+  align-items: stretch;
+  padding: 16px 0%;
+  margin-top: 0px;
   flex-wrap: nowrap;
-  
+}
+
+/* #button-save {
+  position:absolute;
+  bottom:2%;
+  font-family: 'HelveticaNeue-Thin', 'Helvetica Neue Thin', Helvetica, Sans-serif;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  padding: 16px 0%;
+  width:18%;
+  border-radius: 3px;
+  border: 0px;
+  background: #323232;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+#button-save:hover {
+  color: #FFFFFF;
+  background: #545454;
+} */
+
+input[type=range] {
+  height: 36px;
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 18px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #707070;
+  border-radius: 3px;
+  border: 0px solid;
+}
+
+.range.color::-webkit-slider-runnable-track {
+  /* background: #ff0000; */
+  background: linear-gradient(to right, #FF0000 0%, #FFFF00 17%, #00FF00 33%, #00FFFF 50%, #0000FF 67%, #FF00FF 83%, #FF0000 100%);
+}
+
+.range.color::-webkit-slider-thumb {
+  /* background: #ff0000; */
+  border: 2px solid;
+  border-color: #C7C7C7;
+  background: rgba(0, 0, 0, 0);
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 0px solid #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  background: #C7C7C7;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+/* input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #707070;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 18px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #707070;
+  border-radius: 3px;
+  border: 0px solid;
+}
+input[type=range]::-moz-range-thumb {
+  border: 0px solid;
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  background: #C7C7C7;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 18px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #707070;
+  border: 0px solid;
+  border-radius: 6px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #707070;
+  border: 0px solid;
+  border-radius: 6px;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  border: 0px solid;
+  height: 30px;
+  width: 30px;
+  border-radius: 3px;
+  background: #C7C7C7;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #707070;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #707070;
 }
 
 
+ */
